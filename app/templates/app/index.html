@@ -1,0 +1,107 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Добавленный стиль для улучшения читаемости -->
+<style>
+    .carousel-caption {
+        background: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон [[2]][[7]] */
+        padding: 25px 20px; /* Отступы вокруг текста */
+        border-radius: 10px; /* Скругление углов */
+        margin-bottom: 30px; /* Отступ снизу */
+    }
+
+        .carousel-caption p {
+            color: #ffffff !important; /* Белый текст поверх темного фона [[9]] */
+            font-size: 1.5em; /* Увеличенный размер шрифта */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Тень для контраста [[10]] */
+            margin: 0; /* Убираем лишние отступы */
+        }
+
+        .carousel-caption a.btn {
+            background: #007bff; /* Синий фон для кнопки */
+            border-color: #0056b3; /* Темно-синяя граница */
+        }
+</style>
+
+<div class="jumbotron">
+    <!-- Остальной код jumbotron остался без изменений -->
+    <h1>Django</h1>
+    <p class="lead">Django — это бесплатный веб-фреймворк...</p>
+    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Узнать больше &raquo;</a></p>
+</div>
+
+<div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+        <!-- Индикаторы карусели -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            <!-- Слайд 1 -->
+            <div class="item active">
+                <img src="{% static 'app/content/c1.svg' %}" alt="Первый слайд" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        Текст для баннера 1
+                        <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
+                            Читать далее
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Слайд 2 -->
+            <div class="item">
+                <img src="{% static 'app/content/c2.svg' %}" alt="Второй слайд" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        Текст для баннера 2
+                        <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
+                            Читать далее
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Слайд 3 -->
+            <div class="item">
+                <img src="{% static 'app/content/c3.svg' %}" alt="Третий слайд" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        Текст для баннера 3
+                        <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
+                            Читать далее
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Кнопки навигации карусели -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!-- Нижние блоки с информацией -->
+<div class="row">
+    <!-- Блоки col-md-4 остались без изменений -->
+    <div class="col-md-4">
+        <h2>Начало работы</h2>
+        <p>Django предоставляет вам мощный...</p>
+        <p><a class="btn btn-default" href="https://djangobook.com/django-tutorials/">Узнать больше &raquo;</a></p>
+    </div>
+    <!-- Остальные колонки аналогичны -->
+</div>
+{% endblock %}

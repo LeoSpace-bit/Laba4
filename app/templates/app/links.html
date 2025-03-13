@@ -1,0 +1,19 @@
+{% extends "app/layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<p> Мемы мемные  </p>
+
+<div>
+    <a href ="https://pravdacoffee.ru/" target="_blank"> <img src="{% static 'app/content/logo1.jpg' %}" alt="Logo1"/></a>
+    <a href ="https://shop.tastycoffee.ru/" target="_blank"> <img src="{% static 'app/content/logo2.jpg' %}" alt="Logo2"/></a>
+    <a href ="https://coffee-like.com/" target="_blank"> <img src="{% static 'app/content/logo3.jpg' %}" alt="Logo3"/></a>
+</div>
+
+
+
+{% endblock %}
