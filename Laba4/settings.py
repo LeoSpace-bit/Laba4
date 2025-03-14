@@ -113,5 +113,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
-MEDIA_URL = '/media/'  # URL для медиа-файлов
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Путь к папке с медиа
+MEDIA_URL = '/media/'  # URL РґР»СЏ РјРµРґРёР°-С„Р°Р№Р»РѕРІ
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # РџСѓС‚СЊ Рє РїР°РїРєРµ СЃ РјРµРґРёР°

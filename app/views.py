@@ -145,6 +145,11 @@ def blog(request):
     """Renders the blog page."""
     posts = Blog.objects.all()  # Запрос на выбор всех статей блога из модели
 
+    import subprocess
+    with open("requirements2.txt", "w") as f:
+        subprocess.run(["pip", "freeze"], stdout=f)
+
+
     assert isinstance(request, HttpRequest)
     return render(
         request,
